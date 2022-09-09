@@ -25,7 +25,8 @@ class TabActivity : AppCompatActivity() {
             when(posicao) {
                 1 -> aba.icon = getDrawable(R.drawable.person)
                 2 -> aba.icon = getDrawable(R.drawable.album)
-                else -> aba.icon = getDrawable(R.drawable.history)
+                0 -> aba.icon = getDrawable(R.drawable.history)
+                else -> aba.icon = getDrawable(R.drawable.settings)
             }
         }.attach()
     }

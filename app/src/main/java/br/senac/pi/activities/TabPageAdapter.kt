@@ -6,6 +6,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import br.senac.pi.fragments.AlbumsFragment
 import br.senac.pi.fragments.ArtistsFragment
 import br.senac.pi.fragments.RecentsFragment
+import br.senac.pi.fragments.setting
 
 
 //Adaptador chamado para montagem das abas
@@ -13,7 +14,7 @@ class TabPageAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity
 
     //Obtém a quantidade de abas
     override fun getItemCount(): Int {
-        return 3
+        return 4
     }
 
     //Para cada aba, retorna um fragmento
@@ -21,7 +22,8 @@ class TabPageAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity
         return when(position) {
             1 -> ArtistsFragment()
             2 -> AlbumsFragment()
-            else -> RecentsFragment()
+            0 -> RecentsFragment()
+            else -> setting()
         }
     }
 
